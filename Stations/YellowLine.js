@@ -1,6 +1,6 @@
-const { Line, m } = require("./StationsClasses");
+import { Line, m } from "./StationsClasses.js";
 
-let yellowline = new Line();
+export let yellowline = new Line();
 yellowline.stations = [
   "SAMAYPUR BADLI",
   "ROHINI SECTOR-18,19",
@@ -44,8 +44,3 @@ yellowline.distance = 1.27;
 yellowline.time = 1.86;
 yellowline.interchanges = 8;
 yellowline.name = "yellowline";
-m.insert(yellowline);
-
-module.exports = {
-  yellowline,
-};

@@ -1,6 +1,6 @@
-const { m, Line } = require("./StationsClasses");
+import { Line, m } from "./StationsClasses.js";
 
-let rapidmetro = new Line();
+export let rapidmetro = new Line();
 rapidmetro.stations = [
   "SECTOR 55-56",
   "SECTOR-54 CHOWK",
@@ -18,8 +18,3 @@ rapidmetro.distance = 0.96;
 rapidmetro.time = 1.27;
 rapidmetro.interchanges = 1;
 rapidmetro.name = "rapidmetro";
-m.insert(rapidmetro);
-
-module.exports = {
-  rapidmetro,
-};

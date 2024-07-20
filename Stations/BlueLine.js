@@ -1,6 +1,7 @@
-const { Line, m } = require("./StationsClasses");
+// const { Line, m } = require("./StationsClasses");
+import { Line, m } from "./StationsClasses.js";
 
-let blueline = new Line();
+export let blueline = new Line();
 blueline.stations = [
   "DWARKA SECTOR-21",
   "DWARKA SECTOR-8",
@@ -57,8 +58,4 @@ blueline.distance = 1.11;
 blueline.time = 1.7;
 blueline.interchanges = 10;
 blueline.name = "blueline";
-m.insert(blueline);
 
-module.exports = {
- blueline
-};

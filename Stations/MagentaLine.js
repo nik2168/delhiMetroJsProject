@@ -1,6 +1,6 @@
-const { Line, m } = require("./StationsClasses");
+import { Line, m } from "./StationsClasses.js";
 
-let magentaline = new Line();
+export let magentaline = new Line();
 magentaline.stations = [
   "JANAKPURI WEST",
   "DABRI MOR-JANAKPURI SOUTH",
@@ -32,8 +32,3 @@ magentaline.distance = 1.36;
 magentaline.time = 2.4;
 magentaline.interchanges = 4;
 magentaline.name = "magentaline";
-m.insert(magentaline);
-
-module.exports = {
-  magentaline,
-};

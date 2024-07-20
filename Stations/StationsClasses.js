@@ -1,4 +1,4 @@
- class Line {
+ export class Line {
   constructor(stations, name, distance, time, interchanges) {
     this.stations = stations;
     this.name = name;
@@ -9,7 +9,7 @@
 }
 
 
-class StationsInfo{
+export class StationsInfo{
   constructor(){
     this.name = ''
     this.distance = 0
@@ -21,7 +21,7 @@ class StationsInfo{
 };
 
 
- class Metro {
+ export class Metro {
   constructor() {
     this.m = [];
   }
@@ -52,10 +52,6 @@ class StationsInfo{
   }
 }
 
- let m = new Metro();
+ export let m = new Metro();
 
-module.exports = {
-    Line, 
-    m,
-    StationsInfo,
-}
+

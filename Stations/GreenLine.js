@@ -1,6 +1,6 @@
-const { Line, m } = require("./StationsClasses");
+import { Line, m } from "./StationsClasses.js";
 
-let greenline = new Line();
+export let greenline = new Line();
 greenline.stations = [
   "KIRTI NAGAR",
   "SATGURU RAM SINGH MARG",
@@ -31,9 +31,3 @@ greenline.distance = 1.16;
 greenline.time = 1.5;
 greenline.interchanges = 4;
 greenline.name = "greenline";
-m.insert(greenline);
-
-
-module.exports = {
-  greenline,
-};

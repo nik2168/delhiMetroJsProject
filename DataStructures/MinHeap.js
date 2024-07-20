@@ -85,8 +85,7 @@ class MinHeap {
   }
 
 }
-
-module.exports = {
+export {
     MinHeap
 }
 

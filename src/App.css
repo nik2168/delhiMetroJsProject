@@ -1,0 +1,95 @@
+/* .appBg{
+  background-image: url(./background);
+  background-size: cover;
+} */
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    resize: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.wrapper{
+  width: 400px;
+  height: 100vh;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 2px solid white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  border-radius: 5px;
+  overflow: auto;
+
+}
+
+.github{
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.form input{
+  padding: 20px;
+  width: 20vw;
+  background-color: white;
+  color: var(--bg);
+  border: none;
+  border-radius: 5px;
+}
+
+.form button{
+  padding: 20px;
+  cursor: pointer;
+  background-color: blue;
+  color: var(--textColor);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+.backgroundImgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../assets/images/NightEnvirnment.jpg");
+  background-size: cover;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -2;
+}
+
+@keyframes moveAppCloud {
+  0%,
+  100% {
+    transform: translateX(-65px);
+  }
+  50% {
+    transform: translateX(65px);
+  }
+}

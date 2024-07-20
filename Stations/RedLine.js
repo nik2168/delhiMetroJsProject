@@ -1,6 +1,6 @@
-const { Line, m } = require("./StationsClasses");
+import { Line, m } from "./StationsClasses.js";
 
- let redline = new Line();
+export let redline = new Line();
 redline.stations = [
   "SHAHEED STHAL(NEW BUS ADDA)",
   "HINDON RIVER",
@@ -36,8 +36,4 @@ redline.distance = 1.15;
 redline.time = 1.6;
 redline.interchanges = 4;
 redline.name = "redline";
-m.insert(redline);
 
-module.exports = {
-  redline,
-};

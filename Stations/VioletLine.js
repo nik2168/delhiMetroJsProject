@@ -1,6 +1,6 @@
-const { Line, m } = require("./StationsClasses");
+import { Line, m } from "./StationsClasses.js";
 
- let violetline = new Line();
+export let violetline = new Line();
 violetline.stations = [
   "KASHMERE GATE",
   "LAL QUILA",
@@ -41,8 +41,3 @@ violetline.distance = 1.32;
 violetline.time = 1.88;
 violetline.interchanges = 5;
 violetline.name = "violetline";
-m.insert(violetline);
-
-module.exports = {
-  violetline,
-};

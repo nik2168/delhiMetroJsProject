@@ -1,6 +1,6 @@
-const { m, Line } = require("./StationsClasses");
+import { Line, m } from "./StationsClasses.js";
 
-let pinkline = new Line();
+export let pinkline = new Line();
 pinkline.stations = [
   "MAJLIS PARK",
   "AZADPUR",
@@ -45,8 +45,3 @@ pinkline.distance = 1.51;
 pinkline.time = 2.21;
 pinkline.interchanges = 11;
 pinkline.name = "pinkline";
-m.insert(pinkline);
-
-module.exports = {
-  pinkline,
-};

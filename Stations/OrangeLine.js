@@ -1,8 +1,6 @@
-const { m, Line } = require("./StationsClasses");
+import { Line, m } from "./StationsClasses.js";
 
-
-
-let orangeline = new Line();
+export let orangeline = new Line();
 orangeline.stations = [
   "NEW DELHI (YELLOW & AIRPORT LINE)",
   "SHIVAJI STADIUM",
@@ -16,8 +14,3 @@ orangeline.distance = 3.55;
 orangeline.time = 2.71;
 orangeline.interchanges = 3;
 orangeline.name = "orangeline";
-m.insert(orangeline);
-
-module.exports = {
-  orangeline,
-};
