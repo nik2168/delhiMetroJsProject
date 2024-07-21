@@ -15,25 +15,26 @@ function App() {
 
     const res = getData(fromStation, toStation);
     setData(res);
-    setFromStation("");
-    setToStation("");
   };
-  console.log("result :", data);
+
+
 
   return (
-    <div className=" w-[100vw] h-[100vh] flex col-auto ">
+    <div className=" w-[100vw] h-[100vh] lg:flex  sm:flex-row">
       <div className="wrapper">
         <form>
-          <div className="github">Shortest Route Finder</div>
+          <div className="github">PLAN YOUR JOURNEY </div>
         </form>
         <form onSubmit={(e) => routeFinder(e)} className="form">
+         <div className="inputContainer">
+
           <input
             type="text"
             placeholder="from station"
             list="experiencelist"
             value={fromStation}
             onChange={(e) => setFromStation(e.currentTarget.value)}
-          />
+            />
           <datalist id="experiencelist">
             {allStationsList.map((i, idx) => {
               return <option key={idx} value={`${i}`} />;
@@ -45,35 +46,50 @@ function App() {
             list="experiencelist"
             value={toStation}
             onChange={(e) => setToStation(e.currentTarget.value)}
-          />
+            />
+            </div>
           {/* <div style={{ textShadow: "1px 1px 1px #333" }}>
             {"Will provide the shortest path between two stations"}
           </div> */}
           <button onClick={(e) => routeFinder(e)}>Search</button>
         </form>
       </div>
-      <div className="w-[70%] h-[100vh flex justify-center items-start p-8">
-        <div className="w-[7rem] h-[7rem] bg-black flex justify-center items-center font-bold">
-          {data?.totalDistance} KM
-        </div>
-        <div className="w-[50%] h-full bg-black flex-col justify-start p-8 items-start overflow-auto font-bold">
-      
-      
-       {  data?.stations?.map((station) => {
-        return ( <div className="w-auto h-10 bg-[#333] p-2 flex justify-start relative items-center gap-3">
-            <div className="h-3 w-3 bg-white rounded-[50%] ">
-              <div className="h-10 left-3 top-0 w-1 bg-white absolute"></div>
+      <div className="lg:w-[80vw] lg:h-[100vh] sm:w-full sm:h-full flex justify-center  items-start p-8">
+        <div className="w-[100%] h-[100%] flex-col justify-center backdrop-blur-[8px]  items-start rounded-md overflow-hidden">
+          <div className="lg:w-[73%] sm:w-full gap-5 pl-10 pt-4  h-[7rem] rounded-md overflow-hidden flex justify-center">
+            <div className="w-[40%] h-[4rem] rounded-md bg-white text-black flex justify-center lg:pl-10 p-3 items-center font-bold">
+             Distance : {data?.totalDistance} KM
             </div>
-            {station?.name}
-          </div>)
-          
-        })
-          }
-
-
-        </div>
-        <div className="w-[7rem] h-[7rem] bg-black flex justify-center items-center font-bold">
-          {data?.totalTime} MIN
+            <div className="w-[40%] h-[4rem] rounded-md bg-white text-black p-3 flex justify-center lg:pl-10 items-center font-bold">
+               Time : {data?.totalTime} MIN
+            </div>
+          </div>
+          <div className="w-[100%] h-[90%] flex-col justify-start p-8 items-start overflow-auto font-bold">
+            {data?.stations?.map((station, idx) => {
+              let colr = station?.linename?.substring(
+                0,
+                station?.linename?.length - 4
+              );
+              return (
+                <div
+                  key={idx}
+                  style={{ color: `${colr}` }}
+                  className="w-auto h-10  p-2 flex justify-start relative items-center gap-3"
+                >
+                  <div
+                    className={`h-3 w-3 rounded-[50%] `}
+                    style={{ backgroundColor: `${colr}` }}
+                  >
+                    <div
+                      className={`h-10 left-3 top-0 w-1 absolute`}
+                      style={{ backgroundColor: `${colr}` }}
+                    ></div>
+                  </div>
+                  <p className="w-auto h-8  bg-white rounded-md p-[5px] flex justify-center items-center">{station?.name}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

@@ -69,7 +69,7 @@ function finder(src, dst) {
   let s = [];
   let path = new StationsInfo();
   path = dst;
-  s.push(dst);
+  s.push(dst.props);
   totalTime += par[path.dest].time;
 
   while (path.dest !== src.dest) {
@@ -157,12 +157,13 @@ export const getData = (from, to) => {
   let toStation = {
     name: to,
     dest: stationsMap.get(to.toString().toUpperCase()).dest,
+    props: stationsMap.get(to.toString().toUpperCase())
   };
 
   // let result = finder(fromStation, toStation);
   const ans = finder(fromStation, toStation);
   const result = {
-    stations: ans,
+    stations: ans.reverse(),
     totalDistance: Math.trunc(totalDistance),
     totalTime: Math.trunc(totalTime),
   };

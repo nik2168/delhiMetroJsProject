@@ -13,13 +13,22 @@
   background-size: cover;
 }
 
+.inputContainer{
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .wrapper{
   width: 400px;
   height: 100vh;
   position: relative;
+  background-color: #424B54;
   backdrop-filter: blur(10px);
-  border: 2px solid white;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,14 +53,17 @@
 
 .form{
   display: flex;
+  width: 100%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 30px;
 }
 
 .form input{
   padding: 20px;
-  width: 20vw;
+  width: 80%;
   background-color: white;
   color: var(--bg);
   border: none;
@@ -60,6 +72,7 @@
 
 .form button{
   padding: 20px;
+  width: 80%;
   cursor: pointer;
   background-color: blue;
   color: var(--textColor);
@@ -68,28 +81,75 @@
   border-radius: 5px;
 }
 
-
-
-.backgroundImgContainer {
+@media  (max-width : 1000px){
+.wrapper{
+  width: 100vw;
+  height: 33vh;
+  position: relative;
+  background-color: #424B54;
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-  background-image: url("../../assets/images/NightEnvirnment.jpg");
-  background-size: cover;
-  opacity: 0.5;
-  position: absolute;
-  z-index: -2;
+  text-align: center;
+  gap: 10px;
+  border-radius: 5px;
+  overflow: auto;
+
 }
 
-@keyframes moveAppCloud {
-  0%,
-  100% {
-    transform: translateX(-65px);
-  }
-  50% {
-    transform: translateX(65px);
-  }
+.inputContainer{
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.github{
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.form{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.form input{
+  padding: 13px;
+  min-width: 10rem;
+  width: 13rem;
+  background-color: white;
+  color: var(--bg);
+  border: none;
+  border-radius: 5px;
+}
+
+.form button{
+  padding: 20px;
+  min-width: 50%;
+  width: 28rem;
+  cursor: pointer;
+  background-color: blue;
+  color: var(--textColor);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
 }
