@@ -27,7 +27,7 @@
   width: 400px;
   height: 100vh;
   position: relative;
-  background-color: #424B54;
+  background-color: #073B4C;
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
@@ -86,7 +86,6 @@
   width: 100vw;
   height: 33vh;
   position: relative;
-  background-color: #424B54;
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;

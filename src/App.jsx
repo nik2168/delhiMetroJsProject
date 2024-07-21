@@ -54,7 +54,7 @@ function App() {
           <button onClick={(e) => routeFinder(e)}>Search</button>
         </form>
       </div>
-      <div className="lg:w-[80vw] lg:h-[100vh] sm:w-full sm:h-full flex justify-center  items-start p-8">
+      <div className="lg:w-[80vw] lg:h-[100vh] sm:w-full sm:h-full flex justify-center  items-start p-8 bg-">
         <div className="w-[100%] h-[100%] flex-col justify-center backdrop-blur-[8px]  items-start rounded-md overflow-hidden">
           <div className="lg:w-[73%] sm:w-full gap-5 pl-10 pt-4  h-[7rem] rounded-md overflow-hidden flex lg:justify-center sm:justify-start">
             <div className="w-[40%] h-[4rem] rounded-md bg-white text-black flex justify-center lg:pl-10 p-3 items-center font-bold">
