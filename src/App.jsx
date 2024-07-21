@@ -56,7 +56,7 @@ function App() {
       </div>
       <div className="lg:w-[80vw] lg:h-[100vh] sm:w-full sm:h-full flex justify-center  items-start p-8">
         <div className="w-[100%] h-[100%] flex-col justify-center backdrop-blur-[8px]  items-start rounded-md overflow-hidden">
-          <div className="lg:w-[73%] sm:w-full gap-5 pl-10 pt-4  h-[7rem] rounded-md overflow-hidden flex justify-center">
+          <div className="lg:w-[73%] sm:w-full gap-5 pl-10 pt-4  h-[7rem] rounded-md overflow-hidden flex lg:justify-center sm:justify-start">
             <div className="w-[40%] h-[4rem] rounded-md bg-white text-black flex justify-center lg:pl-10 p-3 items-center font-bold">
              Distance : {data?.totalDistance} KM
             </div>
@@ -64,7 +64,7 @@ function App() {
                Time : {data?.totalTime} MIN
             </div>
           </div>
-          <div className="w-[100%] h-[90%] flex-col justify-start p-8 items-start overflow-auto font-bold">
+          <div className="w-[100%] h-[90%] flex-col justify-start lg:pl-[5rem] sm:pl-[1rem] items-start overflow-auto font-bold">
             {data?.stations?.map((station, idx) => {
               let colr = station?.linename?.substring(
                 0,
